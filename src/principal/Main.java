@@ -1,7 +1,7 @@
 package principal;
 
-import modelos.Item;
-import repositorios.RepositorioDeItens;
+import modelos.Mantimento;
+import repositorios.RepositorioDeMantimentos;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RepositorioDeItens rep = new RepositorioDeItens();
-        ArrayList<Item> itens = rep.getTodosOsItens();
+        RepositorioDeMantimentos rep = new RepositorioDeMantimentos();
+        ArrayList<Mantimento> mantimentos = rep.getTodosOsMantimentos();
     }
 }
