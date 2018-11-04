@@ -18,10 +18,10 @@ public class RepositorioDeMantimentos {
             System.out.println(nome);
             double peso = Double.valueOf(partes[1]);
             System.out.println(peso);
-            double tamanho = Double.valueOf(partes[2]);
-            System.out.println(tamanho);
+            double volume = Double.valueOf(partes[2]);
+            System.out.println(volume);
 
-            Mantimento l = new Mantimento(nome, peso, tamanho);
+            Mantimento l = new Mantimento(nome, peso, volume);
             listaDeMantimentos.add(l);
         }
     }
