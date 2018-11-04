@@ -3,9 +3,9 @@ package modelos;
 public class Item {
     private String nome;
     private int peso;
-    private int tamanho;
+    private double tamanho;
 
-    public Item(String nome, int peso, int tamanho) {
+    public Item(String nome, int peso, double tamanho) {
         this.nome = nome;
         this.peso = peso;
         this.tamanho = tamanho;
@@ -16,5 +16,13 @@ public class Item {
 
     public String getNome() {
         return nome;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public double getTamanho() {
+        return tamanho;
     }
 }

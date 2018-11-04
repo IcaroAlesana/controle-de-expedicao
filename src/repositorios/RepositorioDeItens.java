@@ -6,16 +6,19 @@ import modelos.Item;
 import java.util.ArrayList;
 
 public class RepositorioDeItens {
-    private ArrayList<Item> listaDeItens = new ArrayList<Item>();
+    private ArrayList<Item> listaDeItens = new ArrayList<>();
 
     public RepositorioDeItens(){
         LeitorDeArquivo leitor = new LeitorDeArquivo("data/itens.csv");
         ArrayList<String> linhas= leitor.ler();
 
-        for(int i =0;i<linhas.size();i++){
-            String nome = linhas.get(i);
+        for (String linha : linhas) {
+            String[] partes = linha.split(";");
+            String nome = partes[0];
+            int peso = Integer.parseInt(partes[1]);
+            double tamanho = Double.valueOf(partes[2]);
 
-            Item l = new Item(nome);
+            Item l = new Item(nome, peso, tamanho);
             listaDeItens.add(l);
         }
     }
@@ -24,10 +27,9 @@ public class RepositorioDeItens {
     }
 
     public Item getItemPorNome(String nome){
-        for(int i = 0;i<this.listaDeItens.size();i++){
-            Item item = this.listaDeItens.get(i);
+        for (Item item : this.listaDeItens) {
             String nomeDoLocal = item.getNome();
-            if( nome.equals(nomeDoLocal) ){
+            if (nome.equals(nomeDoLocal)) {
                 return item;
             }
         }
