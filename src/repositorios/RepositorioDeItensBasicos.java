@@ -1,14 +1,14 @@
 package repositorios;
 
 import helpers.LeitorDeArquivo;
-import modelos.KitBasico;
+import modelos.ItemBasico;
 
 import java.util.ArrayList;
 
-public class RepositorioDeKitsBasicos {
-    private ArrayList<KitBasico> listaDeKitsBasicos = new ArrayList<>();
+public class RepositorioDeItensBasicos {
+    private ArrayList<ItemBasico> listaDeItensBasicos = new ArrayList<>();
 
-    public RepositorioDeKitsBasicos(){
+    public RepositorioDeItensBasicos(){
         LeitorDeArquivo leitor = new LeitorDeArquivo("data/kits.csv");
         ArrayList<String> linhas= leitor.ler();
 
@@ -21,19 +21,19 @@ public class RepositorioDeKitsBasicos {
             double volume = Double.valueOf(partes[2]);
             System.out.println(volume);
 
-            KitBasico l = new KitBasico(nome, peso, volume);
-            listaDeKitsBasicos.add(l);
+            ItemBasico l = new ItemBasico(nome, peso, volume);
+            listaDeItensBasicos.add(l);
         }
     }
-    public ArrayList<KitBasico> getTodosOsKits(){
-        return this.listaDeKitsBasicos;
+    public ArrayList<ItemBasico> getTodosOsItensBasicos(){
+        return this.listaDeItensBasicos;
     }
 
-    public KitBasico getKitPorNome(String nome){
-        for (KitBasico kitBasico : this.listaDeKitsBasicos) {
-            String nomeDoLocal = kitBasico.getNome();
+    public ItemBasico getItemBasicoPorNome(String nome){
+        for (ItemBasico itemBasico : this.listaDeItensBasicos) {
+            String nomeDoLocal = itemBasico.getNome();
             if (nome.equals(nomeDoLocal)) {
-                return kitBasico;
+                return itemBasico;
             }
         }
         return null;

@@ -1,9 +1,9 @@
 package principal;
 
-import modelos.KitBasico;
+import modelos.ItemBasico;
 import modelos.Mantimento;
 import modelos.Utilidade;
-import repositorios.RepositorioDeKitsBasicos;
+import repositorios.RepositorioDeItensBasicos;
 import repositorios.RepositorioDeMantimentos;
 import repositorios.RepositorioDeUtilidades;
 
@@ -16,8 +16,8 @@ public class Main {
         RepositorioDeMantimentos repM = new RepositorioDeMantimentos();
         ArrayList<Mantimento> mantimentos = repM.getTodosOsMantimentos();
 
-        RepositorioDeKitsBasicos repK = new RepositorioDeKitsBasicos();
-        ArrayList<KitBasico> kitsBasicos = repK.getTodosOsKits();
+        RepositorioDeItensBasicos repK = new RepositorioDeItensBasicos();
+        ArrayList<ItemBasico> kitsBasicos = repK.getTodosOsItensBasicos();
 
         RepositorioDeUtilidades repU = new RepositorioDeUtilidades();
         ArrayList<Utilidade> utilidades = repU.getTodasAsUtilidades();
