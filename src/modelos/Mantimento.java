@@ -1,17 +1,10 @@
 package modelos;
 
-public class Mantimento extends Item {
-    private String nome;
-    private double peso;
-    private double volume;
+public class Mantimento extends ItemMochila {
 
     public Mantimento(String nome, double peso, double volume) {
-        this.nome = nome;
-        this.peso = peso;
-        this.volume = volume;
-    }
-
-    public double getVolume() {
-        return volume;
+        setNome(nome);
+        setPeso(peso);
+        setVolume(volume);
     }
 }

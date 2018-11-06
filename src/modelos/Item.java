@@ -11,4 +11,12 @@ public abstract class Item {
     public double getPeso() {
         return peso;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
 }
