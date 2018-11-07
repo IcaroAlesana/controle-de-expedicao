@@ -22,7 +22,33 @@ public class Campista {
         repositorioDeMantimentos = new RepositorioDeMantimentos();
         repositorioDeItensBasicos = new RepositorioDeItensBasicos();
         repositorioDeUtilidades = new RepositorioDeUtilidades();
+        mochila = new Mochila();
+        utilidades = new ArrayList<>();
 
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public LocalDate getNascimento() {
+        return nascimento;
+    }
+
+    public void setNascimento(LocalDate nascimento) {
+        this.nascimento = nascimento;
     }
 
     public void addItemBasicoNaMochila(String nome) {
@@ -40,5 +66,19 @@ public class Campista {
         utilidades.add(utilidade);
     }
 
+    public void addBarraca() {
+        barraca = new Barraca();
+    }
 
+    public boolean temBarraca() {
+        return (barraca != null);
+    }
+
+    public void mantimentosSuficientes(int dias) {
+        ArrayList<ItemMochila> itensMochila = mochila.getItensMochila();
+        for (ItemMochila itemMochila : itensMochila){
+            itemMochila.
+        }
+
+    }
 }
