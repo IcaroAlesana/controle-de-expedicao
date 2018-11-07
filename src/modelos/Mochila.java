@@ -7,7 +7,7 @@ public class Mochila {
     private ArrayList<ItemBasico> itensBasicos;
     private ArrayList<Mantimento> mantimentos;
 
-    public Mochila(int capacidade) {
+    public Mochila(double capacidade) {
         this.capacidade = capacidade;
         itensBasicos = new ArrayList<>();
         mantimentos = new ArrayList<>();
@@ -25,12 +25,20 @@ public class Mochila {
         }
     }
 
-    public void addItem(ItemBasico itemMochilaBasico) {
-        itensBasicos.add(itemMochilaBasico);
+    public void addItemBasico(ItemBasico itemBasico) {
+        itensBasicos.add(itemBasico);
+    }
+    
+    public void addMantimento(Mantimento mantimento) {
+    	mantimentos.add(mantimento);
     }
 
-    public ArrayList<ItemBasico> getItensMochila() {
+    public ArrayList<ItemBasico> getItensBasicos() {
         return itensBasicos;
+    }
+    
+    public ArrayList<Mantimento> getMantimentos() {
+        return mantimentos;
     }
 
     public boolean dentroDaCapacidade() {

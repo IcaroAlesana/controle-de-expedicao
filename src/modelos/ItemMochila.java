@@ -1,6 +1,6 @@
 package modelos;
 
-public class ItemMochila extends Item {
+public abstract class ItemMochila extends Item {
     private double volume;
 
     public double getVolume() {

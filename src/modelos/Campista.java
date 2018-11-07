@@ -14,15 +14,16 @@ public class Campista {
     private Mochila mochila;
     private Barraca barraca;
     private ArrayList<Utilidade> utilidades;
+    
     private RepositorioDeMantimentos repositorioDeMantimentos;
     private RepositorioDeItensBasicos repositorioDeItensBasicos;
     private RepositorioDeUtilidades repositorioDeUtilidades;
 
-    public Campista() {
-        repositorioDeMantimentos = new RepositorioDeMantimentos();
-        repositorioDeItensBasicos = new RepositorioDeItensBasicos();
-        repositorioDeUtilidades = new RepositorioDeUtilidades();
-        mochila = new Mochila();
+    public Campista(RepositorioDeMantimentos repositorioDeMantimentos, RepositorioDeItensBasicos repositorioDeItensBasicos, RepositorioDeUtilidades repositorioDeUtilidades, double capacidadeMochila) {
+        this.repositorioDeMantimentos = repositorioDeMantimentos;
+        this.repositorioDeItensBasicos = repositorioDeItensBasicos;
+        this.repositorioDeUtilidades = repositorioDeUtilidades;
+        mochila = new Mochila(capacidadeMochila);
         utilidades = new ArrayList<>();
 
     }
@@ -52,13 +53,13 @@ public class Campista {
     }
 
     public void addItemBasicoNaMochila(String nome) {
-        ItemMochila itemMochila = repositorioDeItensBasicos.getItemBasicoPorNome(nome);
-        mochila.addItem(itemMochila);
+        ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(nome);
+        mochila.addItemBasico(itemBasico);
     }
 
     public void addMantimentoNaMochila(String nome) {
-        ItemMochila itemMochila = repositorioDeMantimentos.getMantimentoPorNome(nome);
-        mochila.addItem(itemMochila);
+        Mantimento mantimento = repositorioDeMantimentos.getMantimentoPorNome(nome);
+        mochila.addMantimento(mantimento);
     }
 
     public void addUtilidade(String nome) {
@@ -75,9 +76,9 @@ public class Campista {
     }
 
     public void mantimentosSuficientes(int dias) {
-        ArrayList<ItemMochila> itensMochila = mochila.getItensMochila();
-        for (ItemMochila itemMochila : itensMochila){
-            itemMochila.
+        ArrayList<Mantimento> mantimentosMochila = mochila.getMantimentos();
+        for (Mantimento mantimento : mantimentosMochila){
+            mantimento.getNome().equals("Comida 1 dia");
         }
 
     }
