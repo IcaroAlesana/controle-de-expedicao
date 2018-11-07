@@ -75,10 +75,16 @@ public class Campista {
         return (barraca != null);
     }
 
-    public void mantimentosSuficientes(int dias) {
+    public void mantimentosSuficientesIndividual(int dias) {
         ArrayList<Mantimento> mantimentosMochila = mochila.getMantimentos();
+        int comida = 0;
         for (Mantimento mantimento : mantimentosMochila){
-            mantimento.getNome().equals("Comida 1 dia");
+            if(mantimento.getNome().equals("Comida 1 dia")){
+                comida ++;
+            }
+            if(comida < dias){
+                System.out.println(nome + " nao possui comida suficiente.");
+            }
         }
 
     }

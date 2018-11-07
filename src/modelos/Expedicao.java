@@ -11,7 +11,9 @@ public class Expedicao {
     }
 
 
-    public void mantimentosSuficientes() {
-
+    public void mantimentosSuficientesGrupo() {
+        for (Campista campista : campistas) {
+            campista.mantimentosSuficientesIndividual(dias);
+        }
     }
 }
