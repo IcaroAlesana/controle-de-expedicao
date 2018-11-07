@@ -16,4 +16,24 @@ public class Expedicao {
             campista.mantimentosSuficientesIndividual(dias);
         }
     }
+
+    public Campista getCampistaPorNome(String nome) {
+        for (Campista campista : campistas) {
+            String nomeDoCampista = campista.getNome();
+            if (nome.equals(nomeDoCampista)) {
+                return campista;
+            }
+        }
+        return null;
+    }
+
+    public Campista getCampistaPorCPF(String cpf) {
+        for (Campista campista : campistas) {
+            String cpfDoCampista = campista.getCpf();
+            if (cpf.equals(cpfDoCampista)) {
+                return campista;
+            }
+        }
+        return null;
+    }
 }

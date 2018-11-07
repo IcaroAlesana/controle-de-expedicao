@@ -14,12 +14,13 @@ public class Campista {
     private Mochila mochila;
     private Barraca barraca;
     private ArrayList<Utilidade> utilidades;
-    
+
     private RepositorioDeMantimentos repositorioDeMantimentos;
     private RepositorioDeItensBasicos repositorioDeItensBasicos;
     private RepositorioDeUtilidades repositorioDeUtilidades;
 
-    public Campista(RepositorioDeMantimentos repositorioDeMantimentos, RepositorioDeItensBasicos repositorioDeItensBasicos, RepositorioDeUtilidades repositorioDeUtilidades, double capacidadeMochila) {
+    public Campista(RepositorioDeMantimentos repositorioDeMantimentos, RepositorioDeItensBasicos repositorioDeItensBasicos,
+                    RepositorioDeUtilidades repositorioDeUtilidades, double capacidadeMochila, String nome) {
         this.repositorioDeMantimentos = repositorioDeMantimentos;
         this.repositorioDeItensBasicos = repositorioDeItensBasicos;
         this.repositorioDeUtilidades = repositorioDeUtilidades;
@@ -30,10 +31,6 @@ public class Campista {
 
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getCpf() {
