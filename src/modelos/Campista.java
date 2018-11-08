@@ -6,6 +6,7 @@ import repositorios.RepositorioDeUtilidades;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Campista {
     private String nome;
@@ -14,16 +15,17 @@ public class Campista {
     private Mochila mochila;
     private Barraca barraca;
     private ArrayList<Utilidade> utilidades;
-
+    private Scanner scanner;
     private RepositorioDeMantimentos repositorioDeMantimentos;
     private RepositorioDeItensBasicos repositorioDeItensBasicos;
     private RepositorioDeUtilidades repositorioDeUtilidades;
 
     public Campista(RepositorioDeMantimentos repositorioDeMantimentos, RepositorioDeItensBasicos repositorioDeItensBasicos,
-                    RepositorioDeUtilidades repositorioDeUtilidades, double capacidadeMochila, String nome) {
+                    RepositorioDeUtilidades repositorioDeUtilidades, double capacidadeMochila, String nome, Scanner scanner) {
         this.repositorioDeMantimentos = repositorioDeMantimentos;
         this.repositorioDeItensBasicos = repositorioDeItensBasicos;
         this.repositorioDeUtilidades = repositorioDeUtilidades;
+        this.scanner = scanner;
         mochila = new Mochila(capacidadeMochila);
         utilidades = new ArrayList<>();
 
@@ -65,7 +67,18 @@ public class Campista {
     }
 
     public void addBarraca() {
-        barraca = new Barraca();
+    	System.out.println("Quantas pessoas a barraca suporta?");
+    	int capacidadePessoas = scanner.nextInt();
+    	System.out.println("Qual a coluna d'agua?");
+    	int colunaDAgua = scanner.nextInt();
+    	System.out.println("Qual o peso da barraca?");
+    	double peso = scanner.nextDouble();
+    	boolean avanco = false;
+    	System.out.println("A barraca possui avanco para gaurdar equipamentos do lado de fora? Digite S para sim, ou N para nao.");
+    	if (scanner.next().equals("S")) {
+    		avanco = true;
+    	}
+        barraca = new Barraca(capacidadePessoas, colunaDAgua, peso, avanco);
     }
 
     public boolean temBarraca() {

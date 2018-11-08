@@ -15,13 +15,13 @@ public class Mochila {
 
     public void mostrarItens() {
         System.out.println("Itens basicos: ");
-        for(ItemMochila itemMochila : itensBasicos){
-            System.out.println(itemMochila.getNome());
+        for(Item item : itensBasicos){
+            System.out.println(item.getNome());
         }
 
         System.out.println("Mantimentos: ");
-        for(ItemMochila itemMochila : mantimentos){
-            System.out.println(itemMochila.getNome());
+        for(Item item : mantimentos){
+            System.out.println(item.getNome());
         }
     }
 

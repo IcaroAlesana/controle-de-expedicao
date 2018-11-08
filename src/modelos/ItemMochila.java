@@ -1,13 +1,8 @@
 package modelos;
 
-public abstract class ItemMochila extends Item {
-    private double volume;
+public interface ItemMochila{
 
-    public double getVolume() {
-        return volume;
-    }
+    public abstract double getVolume();
 
-    public void setVolume(double volume) {
-        this.volume = volume;
-    }
+    public abstract void setVolume(double volume);
 }
