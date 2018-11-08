@@ -2,7 +2,7 @@ package modelos;
 
 public interface ItemMochila{
 
-    public abstract double getVolume();
+    public double getVolume();
 
-    public abstract void setVolume(double volume);
+    public void setVolume(double volume);
 }

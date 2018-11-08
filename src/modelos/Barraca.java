@@ -13,4 +13,20 @@ public class Barraca {
     	this.avanco = avanco;
     }
 
+	public int getCapacidadePessoas() {
+		return capacidadePessoas;
+	}
+
+	public int getCulunaDAgua() {
+		return culunaDAgua;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public boolean temAvanco() {
+		return avanco;
+	}
+
 }
