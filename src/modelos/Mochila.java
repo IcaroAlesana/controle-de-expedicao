@@ -2,6 +2,8 @@ package modelos;
 
 import java.util.ArrayList;
 
+import exceptions.EspacoInsuficienteException;
+
 public class Mochila {
     private double capacidade;
     private ArrayList<ItemBasico> itensBasicos;
@@ -26,10 +28,16 @@ public class Mochila {
     }
 
     public void addItemBasico(ItemBasico itemBasico) {
+    	if (!dentroDaCapacidade()) {
+    		throw new EspacoInsuficienteException();
+    	}
         itensBasicos.add(itemBasico);
     }
     
     public void addMantimento(Mantimento mantimento) {
+    	if (!dentroDaCapacidade()) {
+    		throw new EspacoInsuficienteException();
+    	}
     	mantimentos.add(mantimento);
     }
 

@@ -8,6 +8,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import exceptions.EspacoInsuficienteException;
+
 public class Campista {
     private String nome;
     private String cpf;
@@ -53,12 +55,20 @@ public class Campista {
 
     public void addItemBasicoNaMochila(String nome) {
         ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(nome);
-        mochila.addItemBasico(itemBasico);
+        try {
+        	mochila.addItemBasico(itemBasico);
+        } catch (EspacoInsuficienteException ex) {
+        	ex.getMessage();
+        }
     }
 
     public void addMantimentoNaMochila(String nome) {
         Mantimento mantimento = repositorioDeMantimentos.getMantimentoPorNome(nome);
-        mochila.addMantimento(mantimento);
+        try {
+			mochila.addMantimento(mantimento);
+		} catch (EspacoInsuficienteException ex) {
+			ex.getMessage();
+		}
     }
 
     public void addUtilidade(String nome) {
