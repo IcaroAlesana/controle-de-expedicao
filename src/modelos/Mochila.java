@@ -29,14 +29,14 @@ public class Mochila {
 
     public void addItemBasico(ItemBasico itemBasico) {
     	if (!dentroDaCapacidade()) {
-    		throw new EspacoInsuficienteException();
+    		throw new EspacoInsuficienteException(capacidade, volumeOcupado());
     	}
         itensBasicos.add(itemBasico);
     }
     
     public void addMantimento(Mantimento mantimento) {
     	if (!dentroDaCapacidade()) {
-    		throw new EspacoInsuficienteException();
+    		throw new EspacoInsuficienteException(capacidade, volumeOcupado());
     	}
     	mantimentos.add(mantimento);
     }
@@ -47,6 +47,20 @@ public class Mochila {
     
     public ArrayList<Mantimento> getMantimentos() {
         return mantimentos;
+    }
+    
+    public double volumeOcupado() {
+    	double volumeTotal = 0;
+        for(ItemMochila itemMochila : itensBasicos){
+            volumeTotal += itemMochila.getVolume();
+        }
+
+        System.out.println("Mantimentos: ");
+        for(ItemMochila itemMochila : mantimentos){
+            volumeTotal += itemMochila.getVolume();
+        }
+        
+        return volumeTotal;
     }
 
     public boolean dentroDaCapacidade() {
