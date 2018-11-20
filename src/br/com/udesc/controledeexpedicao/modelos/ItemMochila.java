@@ -2,7 +2,7 @@ package br.com.udesc.controledeexpedicao.modelos;
 
 public interface ItemMochila{
 
-    public double getVolume();
+    double getVolume();
 
-    public void setVolume(double volume);
+    void setVolume(double volume);
 }

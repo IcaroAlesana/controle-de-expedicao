@@ -13,7 +13,7 @@ public class LeitorDeArquivo{
     }
     public ArrayList<String> ler(){
 
-        ArrayList<String> linhas = new ArrayList<String>();
+        ArrayList<String> linhas = new ArrayList<>();
 
         try {
           FileReader arq = new FileReader(this.caminho);
