@@ -1,4 +1,4 @@
-package principal;
+package br.com.udesc.controledeexpedicao.principal;
 
 /*import modelos.ItemBasico;
 import modelos.Mantimento;

@@ -1,4 +1,4 @@
-package modelos;
+package br.com.udesc.controledeexpedicao.modelos;
 
 public abstract class Item {
     private String nome;

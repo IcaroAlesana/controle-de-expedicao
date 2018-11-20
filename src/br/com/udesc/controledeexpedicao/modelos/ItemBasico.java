@@ -1,4 +1,4 @@
-package modelos;
+package br.com.udesc.controledeexpedicao.modelos;
 
 public class ItemBasico extends Item implements ItemMochila{
 	

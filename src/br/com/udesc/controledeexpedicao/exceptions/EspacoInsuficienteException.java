@@ -1,4 +1,4 @@
-package exceptions;
+package br.com.udesc.controledeexpedicao.exceptions;
 
 public class EspacoInsuficienteException extends RuntimeException {
 	

@@ -1,9 +1,9 @@
-package repositorios;
-
-import helpers.LeitorDeArquivo;
-import modelos.ItemBasico;
+package br.com.udesc.controledeexpedicao.repositorios;
 
 import java.util.ArrayList;
+
+import br.com.udesc.controledeexpedicao.helpers.LeitorDeArquivo;
+import br.com.udesc.controledeexpedicao.modelos.ItemBasico;
 
 public class RepositorioDeItensBasicos {
     private ArrayList<ItemBasico> listaDeItensBasicos = new ArrayList<>();

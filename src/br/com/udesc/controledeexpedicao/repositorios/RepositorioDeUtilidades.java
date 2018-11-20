@@ -1,9 +1,9 @@
-package repositorios;
-
-import helpers.LeitorDeArquivo;
-import modelos.Utilidade;
+package br.com.udesc.controledeexpedicao.repositorios;
 
 import java.util.ArrayList;
+
+import br.com.udesc.controledeexpedicao.helpers.LeitorDeArquivo;
+import br.com.udesc.controledeexpedicao.modelos.Utilidade;
 
 public class RepositorioDeUtilidades {
     private ArrayList<Utilidade> listaDeUtilidades = new ArrayList<>();

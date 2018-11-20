@@ -1,14 +1,13 @@
-package modelos;
-
-import repositorios.RepositorioDeItensBasicos;
-import repositorios.RepositorioDeMantimentos;
-import repositorios.RepositorioDeUtilidades;
+package br.com.udesc.controledeexpedicao.modelos;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import exceptions.EspacoInsuficienteException;
+import br.com.udesc.controledeexpedicao.exceptions.EspacoInsuficienteException;
+import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
+import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
+import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeUtilidades;
 
 public class Campista {
     private String nome;

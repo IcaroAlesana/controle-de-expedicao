@@ -1,8 +1,8 @@
-package modelos;
+package br.com.udesc.controledeexpedicao.modelos;
 
 import java.util.ArrayList;
 
-import exceptions.EspacoInsuficienteException;
+import br.com.udesc.controledeexpedicao.exceptions.EspacoInsuficienteException;
 
 public class Mochila {
     private double capacidade;

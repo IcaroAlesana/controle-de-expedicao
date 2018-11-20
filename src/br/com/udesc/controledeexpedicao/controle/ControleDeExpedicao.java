@@ -1,12 +1,12 @@
-package controle;
+package br.com.udesc.controledeexpedicao.controle;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import modelos.Campista;
-import repositorios.RepositorioDeItensBasicos;
-import repositorios.RepositorioDeMantimentos;
-import repositorios.RepositorioDeUtilidades;
+import br.com.udesc.controledeexpedicao.modelos.Campista;
+import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
+import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
+import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeUtilidades;
 
 public class ControleDeExpedicao {
 	private RepositorioDeItensBasicos repositorioDeItensBasicos;
