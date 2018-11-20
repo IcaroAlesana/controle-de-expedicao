@@ -16,17 +16,9 @@ public class Campista {
     private Mochila mochila;
     private Barraca barraca;
     private ArrayList<Utilidade> utilidades;
-    private Scanner scanner;
-    private RepositorioDeMantimentos repositorioDeMantimentos;
-    private RepositorioDeItensBasicos repositorioDeItensBasicos;
-    private RepositorioDeUtilidades repositorioDeUtilidades;
 
-    public Campista(RepositorioDeMantimentos repositorioDeMantimentos, RepositorioDeItensBasicos repositorioDeItensBasicos,
-                    RepositorioDeUtilidades repositorioDeUtilidades, double capacidadeMochila, String nome, Scanner scanner) {
-        this.repositorioDeMantimentos = repositorioDeMantimentos;
-        this.repositorioDeItensBasicos = repositorioDeItensBasicos;
-        this.repositorioDeUtilidades = repositorioDeUtilidades;
-        this.scanner = scanner;
+
+    public Campista(double capacidadeMochila, String nome) {
         mochila = new Mochila(capacidadeMochila);
         utilidades = new ArrayList<>();
 
@@ -52,8 +44,7 @@ public class Campista {
         this.nascimento = nascimento;
     }
 
-    public void addItemBasicoNaMochila(String nome) {
-        ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(nome);
+    public void addItemBasicoNaMochila(ItemBasico itemBasico) {
         try {
         	mochila.addItemBasico(itemBasico);
         } catch (EspacoInsuficienteException ex) {
@@ -61,8 +52,7 @@ public class Campista {
         }
     }
 
-    public void addMantimentoNaMochila(String nome) {
-        Mantimento mantimento = repositorioDeMantimentos.getMantimentoPorNome(nome);
+    public void addMantimentoNaMochila(Mantimento mantimento) {
         try {
 			mochila.addMantimento(mantimento);
 		} catch (EspacoInsuficienteException ex) {
@@ -70,24 +60,16 @@ public class Campista {
 		}
     }
 
-    public void addUtilidade(String nome) {
-        Utilidade utilidade = repositorioDeUtilidades.getUtilidadePorNome(nome);
+    public void addUtilidade(Utilidade utilidade) {
         utilidades.add(utilidade);
     }
 
-    public void addBarraca() {
-    	System.out.println("Quantas pessoas a barraca suporta?");
-    	int capacidadePessoas = scanner.nextInt();
-    	System.out.println("Qual a coluna d'agua?");
-    	int colunaDAgua = scanner.nextInt();
-    	System.out.println("Qual o peso da barraca?");
-    	double peso = scanner.nextDouble();
-    	boolean avanco = false;
-    	System.out.println("A barraca possui avanco para gaurdar equipamentos do lado de fora? Digite S para sim, ou N para nao.");
-    	if (scanner.next().equals("S")) {
-    		avanco = true;
-    	}
+    public void addBarraca(int capacidadePessoas, int colunaDAgua, double peso, boolean avanco) {
         barraca = new Barraca(capacidadePessoas, colunaDAgua, peso, avanco);
+    }
+
+    public int espacoNaBarraca() {
+        return barraca.getCapacidadePessoas();
     }
 
     public boolean temBarraca() {

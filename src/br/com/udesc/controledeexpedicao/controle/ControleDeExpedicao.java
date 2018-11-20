@@ -12,18 +12,26 @@ public class ControleDeExpedicao {
 	private RepositorioDeItensBasicos repositorioDeItensBasicos;
 	private RepositorioDeMantimentos repositorioDeMantimentos;
 	private RepositorioDeUtilidades repositorioDeUtilidades;
-	private Scanner scanner = new Scanner(System.in);
+	private Scanner scanner;
     private ArrayList<Campista> campistas;
     private int dias;
 
     public ControleDeExpedicao() {
+        scanner = new Scanner(System.in);
         campistas = new ArrayList<>();
     }
 
 
     public void mantimentosSuficientesGrupo() {
+        int espacoEmBarracas = 0;
         for (Campista campista : campistas) {
             campista.mantimentosSuficientesIndividual(dias);
+            if (campista.temBarraca()) {
+                espacoEmBarracas += campista.espacoNaBarraca();
+            }
+        }
+        if(espacoEmBarracas < campistas.size()){
+            System.out.println("O grupo possui " + espacoEmBarracas + "lugares em barracas, para" + campistas.size() + "campistas.");
         }
     }
     
@@ -33,8 +41,7 @@ public class ControleDeExpedicao {
     	System.out.println("Qual a capacidade da mochila do campista?");
     	double capacidadeMochila = scanner.nextDouble();
     	
-    	Campista campista = new Campista(repositorioDeMantimentos, repositorioDeItensBasicos,
-                    repositorioDeUtilidades, capacidadeMochila, nome, scanner);
+    	Campista campista = new Campista(capacidadeMochila, nome);
     	campistas.add(campista);
     }
 
