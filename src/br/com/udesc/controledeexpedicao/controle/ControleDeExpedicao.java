@@ -1,29 +1,28 @@
 package br.com.udesc.controledeexpedicao.controle;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import br.com.udesc.controledeexpedicao.modelos.Campista;
-import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
-import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
-import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeUtilidades;
+import br.com.udesc.controledeexpedicao.servicos.ServicoDeCampistas;
 
 public class ControleDeExpedicao {
-	private RepositorioDeItensBasicos repositorioDeItensBasicos;
-	private RepositorioDeMantimentos repositorioDeMantimentos;
-	private RepositorioDeUtilidades repositorioDeUtilidades;
-	private Scanner scanner;
-    private ArrayList<Campista> campistas;
     private int dias;
+    
+    private ServicoDeCampistas servicoDeCampistas;
 
-    public ControleDeExpedicao() {
-        scanner = new Scanner(System.in);
-        campistas = new ArrayList<>();
+    public ControleDeExpedicao(ServicoDeCampistas servicoDeCampistas) {
+        
+        this.servicoDeCampistas = servicoDeCampistas;
+    }
+    
+    public void iniciar() {
+    	
     }
 
 
     public void mantimentosSuficientesGrupo() {
         int espacoEmBarracas = 0;
+        ArrayList<Campista> campistas = servicoDeCampistas.getTodosOsCampistas();
         for (Campista campista : campistas) {
             campista.mantimentosSuficientesIndividual(dias);
             if (campista.temBarraca()) {
@@ -35,33 +34,5 @@ public class ControleDeExpedicao {
         }
     }
     
-    public void addCampista() {
-    	System.out.println("Qual o nome do Campista?");
-    	String nome = scanner.nextLine();
-    	System.out.println("Qual a capacidade da mochila do campista?");
-    	double capacidadeMochila = scanner.nextDouble();
-    	
-    	Campista campista = new Campista(capacidadeMochila, nome);
-    	campistas.add(campista);
-    }
-
-    public Campista getCampistaPorNome(String nome) {
-        for (Campista campista : campistas) {
-            String nomeDoCampista = campista.getNome();
-            if (nome.equals(nomeDoCampista)) {
-                return campista;
-            }
-        }
-        return null;
-    }
-
-    public Campista getCampistaPorCPF(String cpf) {
-        for (Campista campista : campistas) {
-            String cpfDoCampista = campista.getCpf();
-            if (cpf.equals(cpfDoCampista)) {
-                return campista;
-            }
-        }
-        return null;
-    }
+    
 }

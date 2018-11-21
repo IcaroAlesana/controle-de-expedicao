@@ -2,12 +2,8 @@ package br.com.udesc.controledeexpedicao.modelos;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import br.com.udesc.controledeexpedicao.exceptions.EspacoInsuficienteException;
-import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
-import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
-import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeUtilidades;
 
 public class Campista {
     private String nome;
@@ -87,6 +83,5 @@ public class Campista {
                 System.out.println(nome + " nao possui comida suficiente.");
             }
         }
-
     }
 }
