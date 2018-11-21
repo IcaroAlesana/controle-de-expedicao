@@ -2,6 +2,7 @@ package br.com.udesc.controledeexpedicao.controle;
 
 import java.util.Scanner;
 
+import br.com.udesc.controledeexpedicao.modelos.Expedicao;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeUtilidades;
@@ -21,10 +22,11 @@ public class ControleGeral{
 	private ServicoDeCampistas servicoDeCampistas;
     
     private ControleDeCampista controleDeCampista;
-    private ControleDeExpedicao controleDeExpedicao;
-    
+    private ControleDeExpedicao controleDeExpedicao;    
 
     private Scanner scanner;
+    
+    private Expedicao expedicao;
     
     public ControleGeral(){
     	this.scanner = new Scanner(System.in);    	
@@ -35,8 +37,12 @@ public class ControleGeral{
     	
     	servicoDeCampistas = new ServicoDeCampistas(scanner);
     	
-    	controleDeCampista = new ControleDeCampista(repositorioDeMantimentos, repositorioDeItensBasicos, repositorioDeUtilidades, scanner);
-    	controleDeExpedicao = new ControleDeExpedicao(servicoDeCampistas);
+
+    	System.out.println("Quandos dias terá a expedicao?");
+    	expedicao = new Expedicao (scanner.nextInt());
+    	
+    	controleDeExpedicao = new ControleDeExpedicao(servicoDeCampistas, scanner, expedicao);
+    	controleDeCampista = new ControleDeCampista(repositorioDeMantimentos, repositorioDeItensBasicos, repositorioDeUtilidades, scanner, servicoDeCampistas, expedicao);
     }
     
     public void iniciar() {

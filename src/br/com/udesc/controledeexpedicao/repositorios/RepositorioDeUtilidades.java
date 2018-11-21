@@ -19,8 +19,8 @@ public class RepositorioDeUtilidades {
             double peso = Double.valueOf(partes[1]);
             System.out.println(peso);
 
-            Utilidade l = new Utilidade(nome, peso);
-            listaDeUtilidades.add(l);
+            Utilidade u = new Utilidade(nome, peso);
+            listaDeUtilidades.add(u);
         }
     }
     public ArrayList<Utilidade> getTodasAsUtilidades(){
