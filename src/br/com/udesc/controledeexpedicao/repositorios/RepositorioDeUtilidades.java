@@ -35,4 +35,11 @@ public class RepositorioDeUtilidades {
         return null;
     }
 
+    public void imprimeListaDeUtilidades() {
+        System.out.println("Lista de utilidades:");
+        for (Utilidade utilidade : listaDeUtilidades) {
+            System.out.println(utilidade.getNome());
+        }
+    }
+
 }

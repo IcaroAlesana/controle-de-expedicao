@@ -51,7 +51,10 @@ public class ControleDeCampista {
         while(escolha != ControleDeCampista.VOLTAR){
             System.out.println("Escolha algo:");
             System.out.println( ControleDeCampista.VERIFICAR_MANTIMENTOS+") Verificar mantimentos do campista");
-            System.out.println( ControleDeCampista.ADICIONAR_ITEM_BASICO+") Por item basico na mochila");
+            System.out.println( ControleDeCampista.ADICIONAR_ITEM_BASICO+") Colocar item basico na mochila do campista");
+            System.out.println( ControleDeCampista.ADICIONAR_MANTIMENTO+") Colocar mantimento na mochila do campista");
+            System.out.println( ControleDeCampista.ADICIONAR_UTILIDADE+") Adicionar utilidade que campista irá carregar");
+            System.out.println( ControleDeCampista.ADICIONAR_BARRACA+") Adicionar barraca que campista irá carregar");
             System.out.println( ControleDeCampista.VOLTAR+") Voltar ao menu anterior");
             escolha = this.scanner.nextInt();
             scanner.nextLine();
@@ -62,16 +65,24 @@ public class ControleDeCampista {
                 break;
                 case ControleDeCampista.ADICIONAR_ITEM_BASICO:
                 	repositorioDeItensBasicos.imprimeListaDeItensBasicos();
-                	System.out.println("Escreva o nome do item que deseja adicionar.");
-                	ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(scanner.nextLine());
-                	System.out.println("itemBasico.getNome()");
-                	
-					try {
-						campista.addItemBasicoNaMochila(itemBasico);
-					} catch (Exception e) {
-						System.out.println("Item nao encontrado");
-					}
+                	System.out.println("Escreva o nome do item que deseja adicionar a mochila do campista");
+                	String nomeItem = scanner.nextLine();
+                	addItemBasicoMochilaCampista(campista, nomeItem);
                 break;
+                case ControleDeCampista.ADICIONAR_MANTIMENTO:
+                    repositorioDeMantimentos.imprimeListaDeMantimentos();
+                    System.out.println("Escreva o nome do mantimento que deseja adicionar a mochila do campista");
+                    String nomeMantimento = scanner.nextLine();
+                    addMantimentoMochilaCampista(campista, nomeMantimento);
+                break;
+                case ControleDeCampista.ADICIONAR_UTILIDADE:
+                    repositorioDeUtilidades.imprimeListaDeUtilidades();
+                    System.out.println("Escreve o nome da utilidade que o campista deve carregar");
+                    String nomeUtilidade = scanner.nextLine();
+                    addUtilidadeCampista(campista, nomeUtilidade);
+                break;
+                case ControleDeCampista.ADICIONAR_BARRACA:
+                    addBarracaCampista(campista);
                 case ControleDeCampista.VOLTAR:
                     this.voltar();
                 break;
@@ -85,18 +96,29 @@ public class ControleDeCampista {
 
     public void addItemBasicoMochilaCampista(Campista campista, String nome) {
         ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(nome);
-        campista.addItemBasicoNaMochila(itemBasico);
-
+        try {
+            campista.addItemBasicoNaMochila(itemBasico);
+        } catch (Exception e) {
+            System.out.println("Item nao encontrado");
+        }
     }
 
     public void addMantimentoMochilaCampista(Campista campista, String nome) {
         Mantimento mantimento = repositorioDeMantimentos.getMantimentoPorNome(nome);
-        campista.addMantimentoNaMochila(mantimento);
+        try {
+            campista.addMantimentoNaMochila(mantimento);
+        } catch (Exception e) {
+            System.out.println("Mantimento nao encontrado");
+        }
     }
 
     public void addUtilidadeCampista(Campista campista, String nome) {
         Utilidade utilidade = repositorioDeUtilidades.getUtilidadePorNome(nome);
-        campista.addUtilidade(utilidade);
+        try {
+            campista.addUtilidade(utilidade);
+        } catch (Exception e) {
+            System.out.println("Utilidade nao encontrada");
+        }
     }
 
     public void addBarracaCampista(Campista campista) {

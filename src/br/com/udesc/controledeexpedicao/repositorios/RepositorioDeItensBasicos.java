@@ -37,6 +37,7 @@ public class RepositorioDeItensBasicos {
     }
     
     public void imprimeListaDeItensBasicos() {
+        System.out.println("Lista de itens basicos:");
     	for (ItemBasico itemBasico : listaDeItensBasicos) {
     		System.out.println(itemBasico.getNome());
     	}

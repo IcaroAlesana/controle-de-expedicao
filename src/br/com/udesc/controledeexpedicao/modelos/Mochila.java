@@ -50,30 +50,22 @@ public class Mochila {
     }
     
     public double volumeOcupado() {
-    	double volumeTotal = 0;
+    	double volumeOcupado = 0;
         for(ItemMochila itemMochila : itensBasicos){
-            volumeTotal += itemMochila.getVolume();
+            volumeOcupado += itemMochila.getVolume();
         }
 
         System.out.println("Mantimentos: ");
         for(ItemMochila itemMochila : mantimentos){
-            volumeTotal += itemMochila.getVolume();
+            volumeOcupado += itemMochila.getVolume();
         }
         
-        return volumeTotal;
+        return volumeOcupado;
     }
 
     public boolean dentroDaCapacidade() {
-        double volumeTotal = 0;
-        for(ItemMochila itemMochila : itensBasicos){
-            volumeTotal += itemMochila.getVolume();
-        }
+        double volumeOcupado = this.volumeOcupado();
 
-        System.out.println("Mantimentos: ");
-        for(ItemMochila itemMochila : mantimentos){
-            volumeTotal += itemMochila.getVolume();
-        }
-
-        return volumeTotal < capacidade;
+        return volumeOcupado < capacidade;
     }
 }

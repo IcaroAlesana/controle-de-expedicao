@@ -35,4 +35,11 @@ public class RepositorioDeMantimentos {
         }
         return null;
     }
+
+    public void imprimeListaDeMantimentos() {
+        System.out.println("Lista de mantimentos:");
+        for (Mantimento mantimento : listaDeMantimentos) {
+            System.out.println(mantimento.getNome());
+        }
+    }
 }
