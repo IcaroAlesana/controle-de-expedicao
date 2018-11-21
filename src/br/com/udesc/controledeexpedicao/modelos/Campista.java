@@ -15,9 +15,9 @@ public class Campista {
 
 
     public Campista(double capacidadeMochila, String nome) {
+        this.nome = nome;
         mochila = new Mochila(capacidadeMochila);
         utilidades = new ArrayList<>();
-
     }
 
     public String getNome() {

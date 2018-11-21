@@ -40,6 +40,7 @@ public class ControleGeral{
 
     	System.out.println("Quandos dias terá a expedicao?");
     	expedicao = new Expedicao (scanner.nextInt());
+        scanner.nextLine();
     	
     	controleDeExpedicao = new ControleDeExpedicao(servicoDeCampistas, scanner, expedicao);
     	controleDeCampista = new ControleDeCampista(repositorioDeMantimentos, repositorioDeItensBasicos, repositorioDeUtilidades, scanner, servicoDeCampistas, expedicao);

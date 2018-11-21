@@ -91,7 +91,6 @@ public class ControleDeCampista {
     }
     
     public void voltar(){
-        System.out.println("programa finalizado");
     }
 
     public void addItemBasicoMochilaCampista(Campista campista, String nome) {
@@ -124,8 +123,10 @@ public class ControleDeCampista {
     public void addBarracaCampista(Campista campista) {
         System.out.println("Quantas pessoas a barraca suporta?");
         int capacidadePessoas = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Qual a coluna d'agua?");
         int colunaDAgua = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("Qual o peso da barraca?");
         double peso = scanner.nextDouble();
         boolean avanco = false;

@@ -16,7 +16,6 @@ public class ServicoDeCampistas {
     }
     
     public void addCampista() {
-    	scanner.nextLine();
     	System.out.println("Qual o nome do Campista?");
     	String nome = scanner.nextLine();
     	
@@ -50,5 +49,11 @@ public class ServicoDeCampistas {
     
     public ArrayList<Campista> getTodosOsCampistas() {
     	return this.campistas;
+    }
+
+    public void imprimeCampistas() {
+        for (Campista campista : campistas) {
+            System.out.println(campista.getNome());
+        }
     }
 }

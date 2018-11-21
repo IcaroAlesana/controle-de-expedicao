@@ -54,8 +54,6 @@ public class Mochila {
         for(ItemMochila itemMochila : itensBasicos){
             volumeOcupado += itemMochila.getVolume();
         }
-
-        System.out.println("Mantimentos: ");
         for(ItemMochila itemMochila : mantimentos){
             volumeOcupado += itemMochila.getVolume();
         }

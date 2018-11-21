@@ -36,6 +36,7 @@ public class ControleDeExpedicao {
             System.out.println( ControleDeExpedicao.VERIFICAR_MANTIMENTOS+") Verificar mantimentos do grupo");
             System.out.println( ControleDeExpedicao.VOLTAR+") Voltar ao menu anterior");
             escolha = this.scanner.nextInt();
+            scanner.nextLine();
 
             switch(escolha){
                 case ControleDeExpedicao.VERIFICAR_MANTIMENTOS:
@@ -52,7 +53,6 @@ public class ControleDeExpedicao {
     }
     
     public void voltar(){
-        System.out.println("programa finalizado");
     }
 
 
