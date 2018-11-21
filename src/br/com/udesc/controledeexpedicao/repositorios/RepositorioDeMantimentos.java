@@ -22,9 +22,6 @@ public class RepositorioDeMantimentos {
             listaDeMantimentos.add(l);
         }
     }
-    public ArrayList<Mantimento> getTodosOsMantimentos(){
-        return this.listaDeMantimentos;
-    }
 
     public Mantimento getMantimentoPorNome(String nome){
         for (Mantimento mantimento : this.listaDeMantimentos) {

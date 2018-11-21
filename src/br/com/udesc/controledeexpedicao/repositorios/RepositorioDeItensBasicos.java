@@ -22,9 +22,6 @@ public class RepositorioDeItensBasicos {
             listaDeItensBasicos.add(l);
         }
     }
-    public ArrayList<ItemBasico> getTodosOsItensBasicos(){
-        return this.listaDeItensBasicos;
-    }
 
     public ItemBasico getItemBasicoPorNome(String nome){
         for (ItemBasico itemBasico : this.listaDeItensBasicos) {

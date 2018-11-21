@@ -21,9 +21,6 @@ public class RepositorioDeUtilidades {
             listaDeUtilidades.add(u);
         }
     }
-    public ArrayList<Utilidade> getTodasAsUtilidades(){
-        return this.listaDeUtilidades;
-    }
 
     public Utilidade getUtilidadePorNome(String nome){
         for (Utilidade mantimento : this.listaDeUtilidades) {
