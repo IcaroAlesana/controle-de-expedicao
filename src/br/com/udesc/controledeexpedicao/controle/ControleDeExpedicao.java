@@ -32,8 +32,8 @@ public class ControleDeExpedicao {
     	int escolha = -1;
         while(escolha != ControleDeExpedicao.VOLTAR){
             System.out.println("Escolha algo:");
-            System.out.println( ControleDeExpedicao.VERIFICAR_MANTIMENTOS+") Organizar expedicao");
-            System.out.println( ControleDeExpedicao.ADICIONAR_CAMPISTA+") Organizar campista");
+            System.out.println( ControleDeExpedicao.VERIFICAR_MANTIMENTOS+") Verificar mantimentos do grupo");
+            System.out.println( ControleDeExpedicao.ADICIONAR_CAMPISTA+") Adicionar campista");
             System.out.println( ControleDeExpedicao.VOLTAR+") Voltar ao menu anterior");
             escolha = this.scanner.nextInt();
 

@@ -16,10 +16,13 @@ public class ServicoDeCampistas {
     }
     
     public void addCampista() {
+    	scanner.nextLine();
     	System.out.println("Qual o nome do Campista?");
     	String nome = scanner.nextLine();
+    	
     	System.out.println("Qual a capacidade da mochila do campista?");
-    	double capacidadeMochila = scanner.nextDouble();
+    	double capacidadeMochila = scanner.nextDouble();    	
+    	scanner.nextLine();
     	
     	Campista campista = new Campista(capacidadeMochila, nome);
     	campistas.add(campista);

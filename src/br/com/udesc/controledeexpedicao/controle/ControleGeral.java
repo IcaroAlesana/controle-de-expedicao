@@ -53,6 +53,7 @@ public class ControleGeral{
             System.out.println( ControleGeral.ORGANIZAR_CAMPISTA+") Organizar campista");
             System.out.println( ControleGeral.SAIR+") Sair");
             escolha = this.scanner.nextInt();
+            scanner.nextLine();
 
             switch(escolha){
                 case ControleGeral.ORGANIZAR_EXPEDICAO:

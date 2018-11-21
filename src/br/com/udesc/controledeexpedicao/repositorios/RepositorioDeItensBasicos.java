@@ -15,11 +15,8 @@ public class RepositorioDeItensBasicos {
         for (String linha : linhas) {
             String[] partes = linha.split(";");
             String nome = partes[0];
-            System.out.println(nome);
             double peso = Double.valueOf(partes[1]);
-            System.out.println(peso);
             double volume = Double.valueOf(partes[2]);
-            System.out.println(volume);
 
             ItemBasico l = new ItemBasico(nome, peso, volume);
             listaDeItensBasicos.add(l);
@@ -37,5 +34,11 @@ public class RepositorioDeItensBasicos {
             }
         }
         return null;
+    }
+    
+    public void imprimeListaDeItensBasicos() {
+    	for (ItemBasico itemBasico : listaDeItensBasicos) {
+    		System.out.println(itemBasico.getNome());
+    	}
     }
 }

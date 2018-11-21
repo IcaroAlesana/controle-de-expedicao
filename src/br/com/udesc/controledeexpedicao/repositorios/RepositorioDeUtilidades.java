@@ -15,9 +15,7 @@ public class RepositorioDeUtilidades {
         for (String linha : linhas) {
             String[] partes = linha.split(";");
             String nome = partes[0];
-            System.out.println(nome);
             double peso = Double.valueOf(partes[1]);
-            System.out.println(peso);
 
             Utilidade u = new Utilidade(nome, peso);
             listaDeUtilidades.add(u);

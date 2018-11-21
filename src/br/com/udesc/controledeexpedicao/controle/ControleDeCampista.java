@@ -50,17 +50,27 @@ public class ControleDeCampista {
     	int escolha = -1;
         while(escolha != ControleDeCampista.VOLTAR){
             System.out.println("Escolha algo:");
-            System.out.println( ControleDeCampista.VERIFICAR_MANTIMENTOS+") Organizar expedicao");
-            System.out.println( ControleDeCampista.ADICIONAR_ITEM_BASICO+") Organizar campista");
+            System.out.println( ControleDeCampista.VERIFICAR_MANTIMENTOS+") Verificar mantimentos do campista");
+            System.out.println( ControleDeCampista.ADICIONAR_ITEM_BASICO+") Por item basico na mochila");
             System.out.println( ControleDeCampista.VOLTAR+") Voltar ao menu anterior");
             escolha = this.scanner.nextInt();
+            scanner.nextLine();
 
             switch(escolha){
                 case ControleDeCampista.VERIFICAR_MANTIMENTOS:
                 	campista.mantimentosSuficientesIndividual(expedicao.getDias());
                 break;
                 case ControleDeCampista.ADICIONAR_ITEM_BASICO:
+                	repositorioDeItensBasicos.imprimeListaDeItensBasicos();
+                	System.out.println("Escreva o nome do item que deseja adicionar.");
+                	ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(scanner.nextLine());
+                	System.out.println("itemBasico.getNome()");
                 	
+					try {
+						campista.addItemBasicoNaMochila(itemBasico);
+					} catch (Exception e) {
+						System.out.println("Item nao encontrado");
+					}
                 break;
                 case ControleDeCampista.VOLTAR:
                     this.voltar();
