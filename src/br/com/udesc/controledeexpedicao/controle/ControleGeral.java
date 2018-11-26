@@ -1,7 +1,11 @@
 package br.com.udesc.controledeexpedicao.controle;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Scanner;
 
+import br.com.udesc.controledeexpedicao.dao.CampistasDAO;
+import br.com.udesc.controledeexpedicao.database.Database;
 import br.com.udesc.controledeexpedicao.modelos.Expedicao;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
@@ -20,6 +24,9 @@ public class ControleGeral{
 	private RepositorioDeUtilidades repositorioDeUtilidades;
 	
 	private ServicoDeCampistas servicoDeCampistas;
+	
+	private CampistasDAO campistasDAO;
+	private Connection connection;
     
     private ControleDeCampista controleDeCampista;
     private ControleDeExpedicao controleDeExpedicao;    
@@ -28,15 +35,18 @@ public class ControleGeral{
     
     private Expedicao expedicao;
     
-    public ControleGeral(){
+    public ControleGeral() throws SQLException{
     	this.scanner = new Scanner(System.in);    	
 
     	repositorioDeItensBasicos = new RepositorioDeItensBasicos();
     	repositorioDeMantimentos = new RepositorioDeMantimentos();
     	repositorioDeUtilidades = new RepositorioDeUtilidades();
     	
-    	servicoDeCampistas = new ServicoDeCampistas(scanner);
+    	servicoDeCampistas = new ServicoDeCampistas(scanner, campistasDAO);
     	
+    	connection = new Database().getConnection();
+    	connection.setAutoCommit(false);
+    	campistasDAO = new CampistasDAO(connection);
 
     	System.out.println("Quandos dias terá a expedicao?");
     	expedicao = new Expedicao (scanner.nextInt());
@@ -64,7 +74,12 @@ public class ControleGeral{
                     this.controleDeCampista.iniciar();
                 break;
                 case ControleGeral.SAIR:
-                    this.encerrar();
+					try {
+						connection.close();
+					} catch (SQLException e) {
+						e.printStackTrace();
+					}
+	                this.encerrar();
                 break;
             }
         }

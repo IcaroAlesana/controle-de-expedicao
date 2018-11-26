@@ -1,16 +1,19 @@
 package br.com.udesc.controledeexpedicao.servicos;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.com.udesc.controledeexpedicao.dao.CampistasDAO;
 import br.com.udesc.controledeexpedicao.modelos.Campista;
 
 public class ServicoDeCampistas {
 
     private ArrayList<Campista> campistas;
+    private CampistasDAO campistasDAO;
     private Scanner scanner;
 
-    public ServicoDeCampistas (Scanner scanner) {
+    public ServicoDeCampistas (Scanner scanner, CampistasDAO campistasDAO) {
     	campistas = new ArrayList<>();
     	this.scanner = scanner;
     }
@@ -25,6 +28,12 @@ public class ServicoDeCampistas {
     	
     	Campista campista = new Campista(capacidadeMochila, nome);
     	campistas.add(campista);
+    	try {
+			campistasDAO.inserir(campista);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     public Campista getCampistaPorNome(String nome) {
