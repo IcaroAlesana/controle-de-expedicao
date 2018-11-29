@@ -23,6 +23,10 @@ public class RepositorioDeMantimentos {
         }
     }
 
+    public ArrayList<Mantimento> getListaDeMantimentos() {
+        return listaDeMantimentos;
+    }
+
     public Mantimento getMantimentoPorNome(String nome){
         for (Mantimento mantimento : this.listaDeMantimentos) {
             String nomeDoLocal = mantimento.getNome();
@@ -31,12 +35,5 @@ public class RepositorioDeMantimentos {
             }
         }
         return null;
-    }
-
-    public void imprimeListaDeMantimentos() {
-        System.out.println("Lista de mantimentos:");
-        for (Mantimento mantimento : listaDeMantimentos) {
-            System.out.println(mantimento.getNome());
-        }
     }
 }

@@ -70,13 +70,13 @@ public class ControleDeCampista {
                 	verificarMantimentos(campista);
                 break;
                 case ControleDeCampista.ADICIONAR_ITEM_BASICO:
-                	repositorioDeItensBasicos.imprimeListaDeItensBasicos();
+                	imprimeListaDeItensBasicos();
                 	System.out.println("Escreva o nome do item que deseja adicionar a mochila do campista");
                 	String nomeItem = scanner.nextLine();
                 	addItemBasicoMochilaCampista(campista, nomeItem);
                 break;
                 case ControleDeCampista.ADICIONAR_MANTIMENTO:
-                    repositorioDeMantimentos.imprimeListaDeMantimentos();
+                    imprimeListaDeMantimentos();
                     System.out.println("Escreva o nome do mantimento que deseja adicionar a mochila do campista");
                     String nomeMantimento = scanner.nextLine();
                     addMantimentoMochilaCampista(campista, nomeMantimento);
@@ -118,6 +118,20 @@ public class ControleDeCampista {
         System.out.println("Lista de utilidades:");
         for (Utilidade utilidade : repositorioDeUtilidades.getListaDeUtilidades()) {
             System.out.println(utilidade.getNome());
+        }
+    }
+
+    private void imprimeListaDeItensBasicos() {
+        System.out.println("Lista de itens basicos:");
+        for (ItemBasico itemBasico : repositorioDeItensBasicos.getListaDeItensBasicos()) {
+            System.out.println(itemBasico.getNome());
+        }
+    }
+
+    private void imprimeListaDeMantimentos() {
+        System.out.println("Lista de mantimentos:");
+        for (Mantimento mantimento : repositorioDeMantimentos.getListaDeMantimentos()) {
+            System.out.println(mantimento.getNome());
         }
     }
 
