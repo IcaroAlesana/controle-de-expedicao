@@ -12,7 +12,7 @@ public class EspacoInsuficienteException extends RuntimeException {
 	}
 	
 	public EspacoInsuficienteException (double capacidade, double ocupado) {
-		System.out.println("Mochila está com " + ocupado + "ocupado, de " + capacidade);
+		System.out.println("Mochila está com " + ocupado + " ocupado, de " + capacidade);
 	}
 
 }

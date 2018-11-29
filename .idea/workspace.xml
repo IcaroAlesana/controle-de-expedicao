@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c37bc64f-8546-4349-8d67-f6c3ff6b702c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeItensBasicos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeItensBasicos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,10 +18,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Utilidade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -28,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+            <state relative-caret-position="606">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -37,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="-901">
               <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -47,32 +66,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-              <folding>
-                <element signature="e#900#901#0" expanded="true" />
-                <element signature="e#941#942#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
+            <state relative-caret-position="246">
+              <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="-196">
+              <caret line="42" column="49" lean-forward="true" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -139,16 +154,17 @@
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/helpers/LeitorDeArquivo.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleGeral.java" />
-        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" />
         <option value="$PROJECT_DIR$/data/mantimentos.csv" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java" />
-        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/ItemNaoEncontradoException.java" />
-        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeUtilidades.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeItensBasicos.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" />
       </list>
     </option>
   </component>
@@ -242,7 +258,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543517027089" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543517822226" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -299,7 +315,7 @@
       <workItem from="1542741468588" duration="2697000" />
       <workItem from="1542804437538" duration="61000" />
       <workItem from="1542831618088" duration="3598000" />
-      <workItem from="1543512271438" duration="4751000" />
+      <workItem from="1543512271438" duration="5537000" />
     </task>
     <task id="LOCAL-00001" summary="Deletar compilados">
       <created>1541347334871</created>
@@ -385,11 +401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543516653973</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Correções gerais.">
+      <created>1543517036334</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543517036334</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47228000" />
+    <option name="totallyTimeSpent" value="48014000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,16 +432,16 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Learn" order="3" weight="0.32980332" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49846154" visible="true" weight="0.23294243" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49846154" visible="true" weight="0.23294243" />
       <window_info id="Structure" order="6" sideWeight="0.50153846" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4989339" weight="0.1787649" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.16251354" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.16199377" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.2689512" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.53582555" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.23076923" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -557,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Utilidade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Barraca.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -582,13 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -627,20 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/ItemNaoEncontradoException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -649,34 +644,6 @@
             <element signature="e#159#160#0" expanded="true" />
             <element signature="e#186#187#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="47" lean-forward="true" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -701,16 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -719,6 +676,72 @@
             <element signature="e#900#901#0" expanded="true" />
             <element signature="e#941#942#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Utilidade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-901">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-196">
+          <caret line="42" column="49" lean-forward="true" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
         </state>
       </provider>
     </entry>

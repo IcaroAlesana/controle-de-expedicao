@@ -80,7 +80,7 @@ public class Campista {
                 comida ++;
             }
         }
-        return comida > dias;
+        return comida >= dias;
     }
     public boolean cafeSuficienteIndividual(int dias) {
         ArrayList<Mantimento> mantimentosMochila = mochila.getMantimentos();
@@ -90,6 +90,6 @@ public class Campista {
                 comida ++;
             }
         }
-        return comida > dias;
+        return comida >= dias;
     }
 }

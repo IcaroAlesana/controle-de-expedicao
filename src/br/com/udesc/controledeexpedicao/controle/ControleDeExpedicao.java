@@ -76,16 +76,16 @@ public class ControleDeExpedicao {
                 espacoEmBarracas += campista.espacoNaBarraca();
             }
             if (comida == false) {
-                System.out.println("O campista" + campista.getNome()+ "nao possui comida suficiente.");
+                System.out.println("O campista " + campista.getNome()+ " nao possui comida suficiente.");
                 ok = false;
             }
             if (cafe == false) {
-                System.out.println("O campista" + campista.getNome()+ "nao possui cafe suficiente.");
+                System.out.println("O campista " + campista.getNome()+ " nao possui cafe suficiente.");
                 ok = false;
             }
         }
         if(espacoEmBarracas < campistas.size()){
-            System.out.println("O grupo possui " + espacoEmBarracas + "lugares em barracas, para" + campistas.size() + "campistas.");
+            System.out.println("O grupo possui " + espacoEmBarracas + " lugares em barracas, para " + campistas.size() + " campistas.");
             ok = false;
         }
 
