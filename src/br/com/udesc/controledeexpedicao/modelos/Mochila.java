@@ -28,17 +28,23 @@ public class Mochila {
     }
 
     public void addItemBasico(ItemBasico itemBasico) {
-    	if (!dentroDaCapacidade()) {
-    		throw new EspacoInsuficienteException(capacidade, volumeOcupado());
-    	}
-        itensBasicos.add(itemBasico);
+        try {
+            if (!dentroDaCapacidade()) {
+                throw new EspacoInsuficienteException(capacidade, volumeOcupado());
+            }
+            itensBasicos.add(itemBasico);
+        } catch (EspacoInsuficienteException e) {
+        }
     }
     
     public void addMantimento(Mantimento mantimento) {
-    	if (!dentroDaCapacidade()) {
-    		throw new EspacoInsuficienteException(capacidade, volumeOcupado());
-    	}
-    	mantimentos.add(mantimento);
+        try {
+            if (!dentroDaCapacidade()) {
+                throw new EspacoInsuficienteException(capacidade, volumeOcupado());
+            }
+            mantimentos.add(mantimento);
+        } catch (EspacoInsuficienteException e) {
+        }
     }
 
     public ArrayList<ItemBasico> getItensBasicos() {

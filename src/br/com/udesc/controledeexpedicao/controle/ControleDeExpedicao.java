@@ -43,7 +43,7 @@ public class ControleDeExpedicao {
                     this.mantimentosSuficientesGrupo();
                 break;
                 case ControleDeExpedicao.ADICIONAR_CAMPISTA:
-                    servicoDeCampistas.addCampista();
+                    adicionarCampista();
                 break;
                 case ControleDeExpedicao.VOLTAR:
                     this.voltar();
@@ -55,18 +55,42 @@ public class ControleDeExpedicao {
     public void voltar(){
     }
 
+    public void adicionarCampista() {
+        System.out.println("Qual o nome do Campista?");
+        String nome = scanner.nextLine();
+        System.out.println("Qual a capacidade da mochila do campista?");
+        double capacidadeMochila = scanner.nextDouble();
+        scanner.nextLine();
+        servicoDeCampistas.addCampista(capacidadeMochila,nome);
+    }
+
 
     public void mantimentosSuficientesGrupo() {
         int espacoEmBarracas = 0;
         ArrayList<Campista> campistas = servicoDeCampistas.getTodosOsCampistas();
+        boolean ok = true;
         for (Campista campista : campistas) {
-            campista.mantimentosSuficientesIndividual(expedicao.getDias());
+            boolean comida = campista.comidaSuficienteIndividual(expedicao.getDias());
+            boolean cafe = campista.cafeSuficienteIndividual(expedicao.getDias());
             if (campista.temBarraca()) {
                 espacoEmBarracas += campista.espacoNaBarraca();
+            }
+            if (comida == false) {
+                System.out.println("O campista" + campista.getNome()+ "nao possui comida suficiente.");
+                ok = false;
+            }
+            if (cafe == false) {
+                System.out.println("O campista" + campista.getNome()+ "nao possui cafe suficiente.");
+                ok = false;
             }
         }
         if(espacoEmBarracas < campistas.size()){
             System.out.println("O grupo possui " + espacoEmBarracas + "lugares em barracas, para" + campistas.size() + "campistas.");
+            ok = false;
+        }
+
+        if (ok == true) {
+            System.out.println("O grupo esta preparado para a expedicao.");
         }
     }
 }

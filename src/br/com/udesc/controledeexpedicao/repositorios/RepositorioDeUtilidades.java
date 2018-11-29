@@ -8,6 +8,10 @@ import br.com.udesc.controledeexpedicao.modelos.Utilidade;
 public class RepositorioDeUtilidades {
     private ArrayList<Utilidade> listaDeUtilidades = new ArrayList<>();
 
+    public ArrayList<Utilidade> getListaDeUtilidades() {
+        return listaDeUtilidades;
+    }
+
     public RepositorioDeUtilidades(){
         LeitorDeArquivo leitor = new LeitorDeArquivo("data/utilidades.csv");
         ArrayList<String> linhas= leitor.ler();
@@ -31,12 +35,4 @@ public class RepositorioDeUtilidades {
         }
         return null;
     }
-
-    public void imprimeListaDeUtilidades() {
-        System.out.println("Lista de utilidades:");
-        for (Utilidade utilidade : listaDeUtilidades) {
-            System.out.println(utilidade.getNome());
-        }
-    }
-
 }

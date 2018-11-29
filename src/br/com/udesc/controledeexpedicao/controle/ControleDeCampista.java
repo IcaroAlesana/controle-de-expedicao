@@ -1,7 +1,9 @@
 package br.com.udesc.controledeexpedicao.controle;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.com.udesc.controledeexpedicao.exceptions.ItemNaoEncontradoException;
 import br.com.udesc.controledeexpedicao.modelos.Campista;
 import br.com.udesc.controledeexpedicao.modelos.Expedicao;
 import br.com.udesc.controledeexpedicao.modelos.ItemBasico;
@@ -11,6 +13,8 @@ import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeItensBasicos;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeMantimentos;
 import br.com.udesc.controledeexpedicao.repositorios.RepositorioDeUtilidades;
 import br.com.udesc.controledeexpedicao.servicos.ServicoDeCampistas;
+
+import javax.swing.text.Utilities;
 
 public class ControleDeCampista {
 	
@@ -45,6 +49,8 @@ public class ControleDeCampista {
     }
     
     public void iniciar() {
+        System.out.println("Campistas:");
+        servicoDeCampistas.imprimeCampistas();
     	System.out.println("Digite o nome do campista");
     	Campista campista = servicoDeCampistas.getCampistaPorNome(scanner.nextLine());
     	int escolha = -1;
@@ -61,7 +67,7 @@ public class ControleDeCampista {
 
             switch(escolha){
                 case ControleDeCampista.VERIFICAR_MANTIMENTOS:
-                	campista.mantimentosSuficientesIndividual(expedicao.getDias());
+                	verificarMantimentos(campista);
                 break;
                 case ControleDeCampista.ADICIONAR_ITEM_BASICO:
                 	repositorioDeItensBasicos.imprimeListaDeItensBasicos();
@@ -76,7 +82,7 @@ public class ControleDeCampista {
                     addMantimentoMochilaCampista(campista, nomeMantimento);
                 break;
                 case ControleDeCampista.ADICIONAR_UTILIDADE:
-                    repositorioDeUtilidades.imprimeListaDeUtilidades();
+                    imprimeListaDeUtilidades();
                     System.out.println("Escreve o nome da utilidade que o campista deve carregar");
                     String nomeUtilidade = scanner.nextLine();
                     addUtilidadeCampista(campista, nomeUtilidade);
@@ -93,30 +99,58 @@ public class ControleDeCampista {
     public void voltar(){
     }
 
+    public void verificarMantimentos(Campista campista){
+        boolean comida = campista.comidaSuficienteIndividual(expedicao.getDias());
+        boolean cafe = campista.cafeSuficienteIndividual(expedicao.getDias());
+        if (comida == false) {
+            System.out.println("Nao possui comida suficiente");
+        }
+        if (cafe == false){
+            System.out.println("Nao possui cafe suficiente");
+        }
+
+        if (comida == true && cafe == true) {
+            System.out.println("Esta preparado para a expedicao");
+        }
+    }
+
+    private void imprimeListaDeUtilidades(){
+        System.out.println("Lista de utilidades:");
+        for (Utilidade utilidade : repositorioDeUtilidades.getListaDeUtilidades()) {
+            System.out.println(utilidade.getNome());
+        }
+    }
+
     public void addItemBasicoMochilaCampista(Campista campista, String nome) {
         ItemBasico itemBasico = repositorioDeItensBasicos.getItemBasicoPorNome(nome);
         try {
+            if(itemBasico == null){
+                throw new ItemNaoEncontradoException();
+            }
             campista.addItemBasicoNaMochila(itemBasico);
-        } catch (Exception e) {
-            System.out.println("Item nao encontrado");
+        } catch (ItemNaoEncontradoException e) {
         }
     }
 
     public void addMantimentoMochilaCampista(Campista campista, String nome) {
         Mantimento mantimento = repositorioDeMantimentos.getMantimentoPorNome(nome);
         try {
+            if(mantimento == null) {
+                throw new ItemNaoEncontradoException();
+            }
             campista.addMantimentoNaMochila(mantimento);
-        } catch (Exception e) {
-            System.out.println("Mantimento nao encontrado");
+        }  catch (ItemNaoEncontradoException e) {
         }
     }
 
     public void addUtilidadeCampista(Campista campista, String nome) {
         Utilidade utilidade = repositorioDeUtilidades.getUtilidadePorNome(nome);
         try {
+            if(utilidade == null) {
+                throw new ItemNaoEncontradoException();
+            }
             campista.addUtilidade(utilidade);
-        } catch (Exception e) {
-            System.out.println("Utilidade nao encontrada");
+        }  catch (ItemNaoEncontradoException e) {
         }
     }
 
