@@ -23,6 +23,10 @@ public class RepositorioDeItensBasicos {
         }
     }
 
+    public ArrayList<ItemBasico> getListaDeItensBasicos() {
+        return listaDeItensBasicos;
+    }
+
     public ItemBasico getItemBasicoPorNome(String nome){
         for (ItemBasico itemBasico : this.listaDeItensBasicos) {
             String nomeDoLocal = itemBasico.getNome();
@@ -31,12 +35,5 @@ public class RepositorioDeItensBasicos {
             }
         }
         return null;
-    }
-    
-    public void imprimeListaDeItensBasicos() {
-        System.out.println("Lista de itens basicos:");
-    	for (ItemBasico itemBasico : listaDeItensBasicos) {
-    		System.out.println(itemBasico.getNome());
-    	}
     }
 }

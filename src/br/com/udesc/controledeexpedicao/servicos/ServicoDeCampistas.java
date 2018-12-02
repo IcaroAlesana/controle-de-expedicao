@@ -18,14 +18,7 @@ public class ServicoDeCampistas {
     	this.scanner = scanner;
     }
     
-    public void addCampista() {
-    	System.out.println("Qual o nome do Campista?");
-    	String nome = scanner.nextLine();
-    	
-    	System.out.println("Qual a capacidade da mochila do campista?");
-    	double capacidadeMochila = scanner.nextDouble();    	
-    	scanner.nextLine();
-    	
+    public void addCampista(double capacidadeMochila, String nome) {
     	Campista campista = new Campista(capacidadeMochila, nome);
     	campistas.add(campista);
     	try {
