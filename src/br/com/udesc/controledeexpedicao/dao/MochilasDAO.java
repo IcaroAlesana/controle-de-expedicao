@@ -15,7 +15,7 @@ public class MochilasDAO {
 
     public void inserir(Campista campista) throws SQLException {
 
-        String sqlMochila = "insert into mochila (cpf, capacidade) values (?, ?)";
+        String sqlMochila = "insert into mochila (cpf_campista, capacidade) values (?, ?)";
         PreparedStatement statementMochila = connection.prepareStatement(sqlMochila);
 
         statementMochila.setString(1, campista.getCpf());
