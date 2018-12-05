@@ -58,10 +58,12 @@ public class ControleDeExpedicao {
     public void adicionarCampista() {
         System.out.println("Qual o nome do Campista?");
         String nome = scanner.nextLine();
+        System.out.println("Qual o cpf do Campista?");
+        String cpf = scanner.nextLine();
         System.out.println("Qual a capacidade da mochila do campista?");
         double capacidadeMochila = scanner.nextDouble();
         scanner.nextLine();
-        servicoDeCampistas.addCampista(capacidadeMochila,nome);
+        servicoDeCampistas.addCampista(capacidadeMochila,nome,cpf);
     }
 
 

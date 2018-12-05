@@ -5,24 +5,29 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import br.com.udesc.controledeexpedicao.dao.CampistasDAO;
+import br.com.udesc.controledeexpedicao.dao.MochilasDAO;
 import br.com.udesc.controledeexpedicao.modelos.Campista;
 
 public class ServicoDeCampistas {
 
     private ArrayList<Campista> campistas;
     private CampistasDAO campistasDAO;
+    private MochilasDAO mochilasDAO;
     private Scanner scanner;
 
-    public ServicoDeCampistas (Scanner scanner, CampistasDAO campistasDAO) {
+    public ServicoDeCampistas (Scanner scanner, CampistasDAO campistasDAO, MochilasDAO mochilasDAO) {
+        this.campistasDAO = campistasDAO;
+        this.mochilasDAO = mochilasDAO;
     	campistas = new ArrayList<>();
     	this.scanner = scanner;
     }
     
-    public void addCampista(double capacidadeMochila, String nome) {
-    	Campista campista = new Campista(capacidadeMochila, nome);
+    public void addCampista(double capacidadeMochila, String nome, String cpf) {
+    	Campista campista = new Campista(capacidadeMochila, nome, cpf);
     	campistas.add(campista);
     	try {
 			campistasDAO.inserir(campista);
+            mochilasDAO.inserir(campista);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

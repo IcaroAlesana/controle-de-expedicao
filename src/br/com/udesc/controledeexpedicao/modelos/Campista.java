@@ -19,7 +19,12 @@ public class Campista {
         mochila = new Mochila(capacidadeMochila);
         utilidades = new ArrayList<>();
     }
-
+    public Campista(double capacidadeMochila, String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+        mochila = new Mochila(capacidadeMochila);
+        utilidades = new ArrayList<>();
+    }
     public String getNome() {
         return nome;
     }
@@ -28,8 +33,8 @@ public class Campista {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public Mochila getMochila() {
+        return mochila;
     }
 
     public LocalDate getNascimento() {

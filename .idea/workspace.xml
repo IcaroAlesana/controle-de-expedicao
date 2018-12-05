@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c37bc64f-8546-4349-8d67-f6c3ff6b702c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/ItensBasicosDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/MochilasDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controle-de-expedicao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/controle-de-expedicao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/CampistasDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/CampistasDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,50 +20,97 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/CampistasDAO.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="255">
-                    <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Expedicao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/database/Database.java">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="932">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/CampistasDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
+              <folding>
+                <element signature="e#298#299#0" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/ItensBasicosDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#396#397#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemBasico.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="49" lean-forward="true" selection-start-column="49" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/MochilasDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#175#176#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+              <folding>
+                <element signature="e#948#949#0" expanded="true" />
+                <element signature="e#977#978#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,20 +124,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java">
+        <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="32" column="52" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="52" />
+            <state relative-caret-position="85">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +163,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -152,19 +200,30 @@
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleGeral.java" />
         <option value="$PROJECT_DIR$/data/mantimentos.csv" />
-        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/ItemNaoEncontradoException.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeUtilidades.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeItensBasicos.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java" />
-        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/exceptions/EspacoInsuficienteException.java" />
-        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/MochilaDAO.java" />
         <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/CampistasDAO.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ItensBasicosDAO.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemBasico.java" />
+        <option value="$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/ItensBasicosDAO.java" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -175,17 +234,34 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="controle-de-expedicao" type="58d84e3e:PackageViewProjectNode" />
+              <item name="controle-de-expedicao" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="controle-de-expedicao" type="58d84e3e:PackageViewProjectNode" />
+              <item name="controle-de-expedicao" type="616d4139:PackageViewModuleNode" />
+              <item name="br.com.udesc.controledeexpedicao" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,6 +285,13 @@
               <item name="controle-de-expedicao" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controledeexpedicao" type="462c0819:PsiDirectoryNode" />
+              <item name="controle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="controle-de-expedicao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="controle-de-expedicao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controledeexpedicao" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -225,6 +308,24 @@
               <item name="controledeexpedicao" type="462c0819:PsiDirectoryNode" />
               <item name="modelos" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="controle-de-expedicao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="controle-de-expedicao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controledeexpedicao" type="462c0819:PsiDirectoryNode" />
+              <item name="principal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="controle-de-expedicao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="controle-de-expedicao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controledeexpedicao" type="462c0819:PsiDirectoryNode" />
+              <item name="repositorios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="controle-de-expedicao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -234,13 +335,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544039478043" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/postgresql-42.2.5.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544047575810" />
+    <property name="last_opened_file_path" value="D:/Downloads/postgresql-42.2.5.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -298,7 +400,8 @@
       <workItem from="1543521700671" duration="13000" />
       <workItem from="1543522255063" duration="10703000" />
       <workItem from="1543756814823" duration="206000" />
-      <workItem from="1544038874288" duration="604000" />
+      <workItem from="1543765522423" duration="6928000" />
+      <workItem from="1544042037229" duration="5721000" />
     </task>
     <task id="LOCAL-00001" summary="Deletar compilados">
       <created>1541347334871</created>
@@ -398,11 +501,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543756939421</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Correções gerais.">
+      <created>1543764102591</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543764102592</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59744000" />
+    <option name="totallyTimeSpent" value="71985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -414,20 +524,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info id="Learn" order="3" weight="0.32980332" />
+      <window_info id="Learn" order="3" weight="0.32928804" />
       <window_info id="Capture Tool" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49846154" visible="true" weight="0.23134328" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49846154" visible="true" weight="0.23676248" />
       <window_info id="Structure" order="6" sideWeight="0.50153846" side_tool="true" weight="0.24962178" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4989339" weight="0.1787649" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.16112956" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.32872504" />
+      <window_info anchor="bottom" id="Messages" order="0" sideWeight="0.4989339" visible="true" weight="0.1774461" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32872504" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5010661" side_tool="true" weight="0.24270353" />
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
@@ -436,7 +547,7 @@
       <window_info anchor="bottom" id="Debug" order="8" weight="0.23076923" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.4989339" weight="0.16251354" />
+      <window_info anchor="bottom" id="TODO" order="11" sideWeight="0.4989339" weight="0.16129032" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -577,13 +688,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemBasico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mantimento.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -622,24 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeItensBasicos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="59" lean-forward="true" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeMantimentos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="68" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -657,27 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -685,17 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java">
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Expedicao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -708,29 +770,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Expedicao.java">
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/principal/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/repositorios/RepositorioDeItensBasicos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="e#940#941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeCampista.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Campista.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="374">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+          <folding>
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemMochila.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/Mochila.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ControleDeExpedicao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="932">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/servicos/ServicoDeCampistas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/controle/ItensBasicosDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/CampistasDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        <state>
+          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
+          <folding>
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/modelos/ItemBasico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="49" lean-forward="true" selection-start-column="49" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/MochilasDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/udesc/controledeexpedicao/dao/ItensBasicosDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -791,7 +954,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -811,7 +973,6 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>postgresql-42.2.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

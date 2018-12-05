@@ -27,6 +27,10 @@ public class Mochila {
         }
     }
 
+    public double getCapacidade() {
+        return capacidade;
+    }
+
     public void addItemBasico(ItemBasico itemBasico) {
         try {
             if (!dentroDaCapacidade(itemBasico.getVolume())) {
