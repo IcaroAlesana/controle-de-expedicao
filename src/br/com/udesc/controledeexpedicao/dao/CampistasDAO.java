@@ -14,13 +14,13 @@ public class CampistasDAO {
 	}
 	
 	public void inserir(Campista campista) throws SQLException {
-		String sql = "insert into pessoa (cpf, nome_completo, idade) values (?, ?, ?)";		
-		PreparedStatement statement = connection.prepareStatement(sql);
+		String sqlA = "insert into pessoa (cpf, nome_completo) values (?, ?)";
+		PreparedStatement statement = connection.prepareStatement(sqlA);
+		String sqlB = "insert into mochila (cpf, )";
 		
-		/*statement.setString(1, cpf);
-		statement.setString(2, nome);
-		statement.setInt(3, idade);*/
-		
+		statement.setString(1, campista.getCpf());
+		statement.setString(2, campista.getNome());
+
 		try {
 			statement.execute();
 			connection.commit();
